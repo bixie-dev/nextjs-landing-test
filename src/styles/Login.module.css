@@ -1,0 +1,12 @@
+.background {
+  background-color: #EAEEF4;
+  font-family: 'Poppins';
+}
+
+.sss {
+  position: absolute;
+  width: 770px;
+  height: 100px;
+  background: #FFFFFF;
+  border-radius: 24px;
+}

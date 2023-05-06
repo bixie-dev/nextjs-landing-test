@@ -1,0 +1,72 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#F2F5FA];
+  }
+}
+
+.toggleTabBox {
+  width: 300px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EFF3F8;
+  border: solid 2px #4269E1;
+  padding: 5px;
+  position: relative;
+  color: #4269E1;
+}
+
+.toggleTabBox button {
+  font-size: 16px;
+  transition: .3s;
+  width: calc(50% - 5px);
+  height: 50px;
+}
+
+.toggleTabBox .cover-label {
+    position: absolute;
+    z-index: 2;
+    transform: translateX(50%);
+    width: calc(50% - 5px);
+    height: calc(100% - 10px);
+    background: white;
+    text-align: center;
+    color: #4269E1;
+    font-size: 16px;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.toggleTabBox.isOpen .cover-label {
+  top: 5px;
+  left: 5px;
+  right: auto;
+  transition: .3s;
+  transform: none;
+}
+
+.toggleTabBox .first-tab {
+  opacity: 1;
+}
+
+.toggleTabBox .second-tab {
+  opacity: 0;
+}
+
+.toggleTabBox.isOpen .first-tab {
+  opacity: 0;
+}
+
+.toggleTabBox.isOpen .second-tab {
+  opacity: 1;
+}
